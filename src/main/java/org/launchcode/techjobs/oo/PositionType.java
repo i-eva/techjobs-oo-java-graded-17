@@ -1,5 +1,7 @@
 package org.launchcode.techjobs.oo;
 
+import java.util.Objects;
+
 public class PositionType {
     // The constructors, getters, and setters are completed in the starter code.
 
@@ -26,9 +28,24 @@ public class PositionType {
 
     // TODO: Add custom equals and hashCode methods. Consider two PositionType objects "equal" when
     //  their id fields match.
-    //Use the Generate option again to add the equals and hashCode methods.
-    // Refer to the Classes and Objects Part 2 IntelliJ Generator Shortcut section if you need a quick review.
-    //Assume that two PositionType objects are equal when their id fields match.
+    // In the IntelliJ editor, right-click on the class name then select Generate from the menu.
+    // Select equals() and hashCode(). You will be asked which template to use.
+    // Select java.util.Objects.equals() and hashCode() (java 7+). This is all we will select for now.
+    // When you are asked to Choose fields to be included in equals() choose the fields you want equals to consider.
+    // The next menu will ask you to Choose the fields you want included in hashCode().
+    // This should match the fields you selected when you were setting up the equals() method. Select Create.
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PositionType that = (PositionType) o;
+        return id == that.id && Objects.equals(value, that.value);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, value);
+    }
 
     // Getters and Setters:
 
