@@ -38,6 +38,25 @@ public class Job {
 
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
+    // In the IntelliJ editor, right-click on the class name then select Generate from the menu.
+    // Select equals() and hashCode(). You will be asked which template to use.
+    // Select java.util.Objects.equals() and hashCode() (java 7+). This is all we will select for now.
+    // When you are asked to Choose fields to be included in equals() choose the fields you want equals to consider.
+    // The next menu will ask you to Choose the fields you want included in hashCode().
+    // This should match the fields you selected when you were setting up the equals() method. Select Create.
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Job job = (Job) o;
+        return id == job.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.

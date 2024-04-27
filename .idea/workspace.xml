@@ -100,7 +100,7 @@
       <recent name="org.launchcode.techjobs.oo" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.TestTaskThree">
+  <component name="RunManager" selected="Gradle.TestTaskTwo">
     <configuration name="TestTaskThree" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -223,8 +223,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.TestTaskThree" />
         <item itemvalue="Gradle.TestTaskTwo" />
+        <item itemvalue="Gradle.TestTaskThree" />
         <item itemvalue="Gradle.TestTaskThree.testHasNoArgConstructor" />
         <item itemvalue="Gradle.TestTaskThree.testHasNoNextIdAccessors" />
         <item itemvalue="Gradle.TestTaskTwo.testCoreCompetencyHasNoIdSetter" />
