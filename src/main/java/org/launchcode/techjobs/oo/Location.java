@@ -61,3 +61,4 @@ public class Location {
     }
 
 }
+// 3/3 Task 2 Location tests pass
