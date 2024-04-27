@@ -3,7 +3,7 @@ package org.launchcode.techjobs.oo;
 import java.util.Objects;
 
 public class Job {
-
+    // Fields provided in starter code
     private int id;
     private static int nextId = 1;
 
@@ -16,7 +16,12 @@ public class Job {
     // TODO: Add two constructors - one to initialize a unique ID and a second to initialize the
     //  other five fields. The second constructor should also call the first in order to initialize
     //  the 'id' field.
-
+    // Code a constructor to initialize the id field with a unique value. This constructor should take no parameters.
+    public Job() {
+        id = nextId;
+        // Increments so every new Job object will get a different ID number
+        nextId++;
+    }
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
 
