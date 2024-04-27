@@ -22,6 +22,20 @@ public class Job {
         // Increments so every new Job object will get a different ID number
         nextId++;
     }
+    // Call the first constructor in order to initialize each of the five fields above
+    // Make sure the parameters are defined in the specified order.
+    // Job (String...) assigns values to each of the five fields
+    // Job (String...) initializes fields for the object by calling the first constructor with the this(); statement
+    // Including this(); in any Employer constructor makes initializing id a default behavior
+    public Job(String name, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency) {
+        this();
+        this.name = name;
+        this.employer = employer;
+        this.location = location;
+        this.positionType = positionType;
+        this.coreCompetency = coreCompetency;
+    }
+
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
 
