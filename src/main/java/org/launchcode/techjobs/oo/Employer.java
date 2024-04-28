@@ -22,7 +22,7 @@ public class Employer {
     }
 
     // Employer (String value) assigns aValue to the value field
-    // Employer (String, value) initializes id for the object by calling the first constructor with the this(); statement
+    // Employer (String value) initializes id for the object by calling the first constructor with the this(); statement
     // Including this(); in any Employer constructor makes initializing id a default behavior
     public Employer(String value) {
         this();
