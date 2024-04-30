@@ -42,4 +42,10 @@ public class JobTest {
         assertEquals("Persistence", techJob.getCoreCompetency().toString());
     }
 
+    @Test
+    public void testJobsForEquality() {
+        Job job3 = new Job("Gofer", new Employer("Jim Henson Productions"), new Location("Backstage"), new PositionType("Nephew of Theatre Owner"), new CoreCompetency("Makes coffee"));
+        Job job4 = new Job("Gofer", new Employer("Jim Henson Productions"), new Location("Backstage"), new PositionType("Nephew of Theatre Owner"), new CoreCompetency("Makes coffee"));
+        assertNotEquals(job3, job4); //tests for unique ID numbers while setting all other fields to the same values
+    }
 }
