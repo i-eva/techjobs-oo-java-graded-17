@@ -12,6 +12,7 @@ public class Job {
     private Location location;
     private PositionType positionType;
     private CoreCompetency coreCompetency;
+    private String jobString;
 
     // TODO: Add two constructors - one to initialize a unique ID and a second to initialize the
     //  other five fields. The second constructor should also call the first in order to initialize
@@ -56,6 +57,22 @@ public class Job {
     @Override
     public int hashCode() {
         return Objects.hash(id);
+    }
+
+    // TODO: create a toString method that passes the first test in TestTaskFive.
+    //  Since the test only checks if the returned string starts and ends with a blank line, make that happen.
+
+    @Override
+    public String toString() {
+        String jobString =
+        System.lineSeparator() + "ID: " + getId() +
+        System.lineSeparator() + "Name: " + getName() +
+        System.lineSeparator() + "Employer: " + getEmployer() +
+        System.lineSeparator() + "Location: " + getLocation() +
+        System.lineSeparator() + "Position Type: " + getPositionType() +
+        System.lineSeparator() + "Core Competency: " + getCoreCompetency() +
+        System.lineSeparator();
+        return jobString;
     }
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
@@ -117,4 +134,6 @@ public class Job {
     public void setCoreCompetency(CoreCompetency coreCompetency) {
         this.coreCompetency = coreCompetency;
     }
+
+
 }

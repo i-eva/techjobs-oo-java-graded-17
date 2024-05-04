@@ -52,12 +52,23 @@ public class JobTest {
 
     @Test
     public void testToStringStartsAndEndsWithNewLine() {
-        // When passed a Job object (ToString(job6)), it should return a string that contains a blank line before and after the job information.
-        // Use assertEquals to verify that these characters are correct, in correct format
         Job job6 = new Job("Zoot", new Employer("Jim Henson Productions"), new Location("Orchestra Pit"), new PositionType("Musician"), new CoreCompetency("Plays Saxophone"));
         String firstChar = String.valueOf(job6.toString().charAt(0));
         String lastChar = String.valueOf(job6.toString().charAt(job6.toString().length()-1));
-        assertEquals(firstChar, lineSeparator());
-        assertEquals(lastChar, lineSeparator());
+        assertEquals(firstChar, lineSeparator()); // tests that first line is not populating with "ID :" + job6.getId()
+        assertEquals(lastChar, lineSeparator()); // tests that last line is not populating with "Core Competency : " + job6.getCoreCompetency().toString()
+    }
+
+    @Test
+    public void testToStringContainsCorrectLabelsAndData() {
+        Job job7 = new Job("Waldorf", new Employer("Jim Henson Productions"), new Location("Box Stage Left"), new PositionType("Heckler"), new CoreCompetency("Improv Comedy"));
+        assertEquals(
+                System.lineSeparator() + "ID: " + job7.getId() +
+                        System.lineSeparator() + "Name: Waldorf" +
+                        System.lineSeparator() + "Employer: Jim Henson Productions" +
+                        System.lineSeparator() + "Location: Box Stage Left" +
+                        System.lineSeparator() + "Position Type: Heckler" +
+                        System.lineSeparator() + "Core Competency: Improv Comedy" +
+                        System.lineSeparator(), job7.toString());
     }
 }
