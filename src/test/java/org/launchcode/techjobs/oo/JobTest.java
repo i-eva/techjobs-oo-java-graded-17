@@ -71,4 +71,22 @@ public class JobTest {
                         System.lineSeparator() + "Core Competency: Improv Comedy" +
                         System.lineSeparator(), job7.toString());
     }
+
+    @Test
+    public void testToStringHandlesEmptyField() {
+        Job job8 = new Job("", new Employer ("Jim Henson Productions"), new Location(""), new PositionType(""), new CoreCompetency(""));
+        assertEquals(
+                lineSeparator() + "ID: " + job8.getId() +
+                        lineSeparator() + "Name: Data not available" +
+                        lineSeparator() + "Employer: Jim Henson Productions" +
+                        lineSeparator() + "Location: Data not available" +
+                        lineSeparator() + "Position Type: Data not available" +
+                        lineSeparator() + "Core Competency: Data not available" +
+                        lineSeparator(), job8.toString());
+       // Job job9 = new Job("", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
+       // assertEquals(
+        // lineSeparator() + "ID: " + job9.getId() +
+        // lineSeparator() + "OOPS! This job does not seem to exist." +
+        // lineSeparator(), job9.toString());
+    }
 }

@@ -12,7 +12,6 @@ public class Job {
     private Location location;
     private PositionType positionType;
     private CoreCompetency coreCompetency;
-    private String jobString;
 
     // TODO: Add two constructors - one to initialize a unique ID and a second to initialize the
     //  other five fields. The second constructor should also call the first in order to initialize
@@ -64,13 +63,43 @@ public class Job {
 
     @Override
     public String toString() {
+        String printName;
+        String printEmployer;
+        String printLocation;
+        String printPositionType;
+        String printCoreCompetency;
+        if (getName().isBlank()) {
+            printName = "Data not available";
+        } else {
+            printName = getName();
+        }
+        if (getEmployer().getValue().isBlank()) {
+            printEmployer = "Data not available";
+        } else {
+            printEmployer = getEmployer().getValue();
+        }
+        if (getLocation().getValue().isBlank()) {
+            printLocation = "Data not available";
+        } else {
+            printLocation = getLocation().getValue();
+        }
+        if (getPositionType().getValue().isBlank()) {
+            printPositionType = "Data not available";
+        } else {
+            printPositionType = getPositionType().getValue();
+        }
+        if (getCoreCompetency().getValue().isBlank()) {
+            printCoreCompetency = "Data not available";
+        } else {
+            printCoreCompetency = getCoreCompetency().getValue();
+        }
         String jobString =
         System.lineSeparator() + "ID: " + getId() +
-        System.lineSeparator() + "Name: " + getName() +
-        System.lineSeparator() + "Employer: " + getEmployer() +
-        System.lineSeparator() + "Location: " + getLocation() +
-        System.lineSeparator() + "Position Type: " + getPositionType() +
-        System.lineSeparator() + "Core Competency: " + getCoreCompetency() +
+        System.lineSeparator() + "Name: " + printName +
+        System.lineSeparator() + "Employer: " + printEmployer +
+        System.lineSeparator() + "Location: " + printLocation +
+        System.lineSeparator() + "Position Type: " + printPositionType +
+        System.lineSeparator() + "Core Competency: " + printCoreCompetency +
         System.lineSeparator();
         return jobString;
     }
