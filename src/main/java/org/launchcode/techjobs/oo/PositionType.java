@@ -2,7 +2,7 @@ package org.launchcode.techjobs.oo;
 
 import java.util.Objects;
 
-public class PositionType {
+public class PositionType extends JobField {
     // The constructors, getters, and setters are completed in the starter code.
 
     private int id;
