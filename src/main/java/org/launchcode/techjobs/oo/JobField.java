@@ -4,7 +4,7 @@ import java.util.Objects;
 
 // DRY Employer, Location, PositionType, and CoreCompetency classes
 
-abstract class JobField {
+public abstract class JobField {
 
     // Two fields: ID and value
     private int id;
